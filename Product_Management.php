@@ -1,5 +1,7 @@
 <!-- Bootstrap -->
 <?php
+ob_start();
+// session_start();
 if (isset($_SESSION['admin'])&& $_SESSION["admin"]==1)
 {
 ?>
@@ -81,7 +83,8 @@ if (isset($_SESSION['admin'])&& $_SESSION["admin"]==1)
 }
 else
 {
-    echo '<script>alert("You are not administrator")</script>';
-    echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+    echo $_SESSION;
+    // echo '<script>alert(" ")</script>';
+    // echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 }
 ?>
