@@ -6,6 +6,10 @@ class connecttt{
     public $dbName;
     public function __construct()
     {
+        // $this->sever = "localhost";
+        // $this->user = "root";
+        // $this->password = "";
+        // $this->dbName = "online_shopping";
         $this->sever = "en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
         $this->user = "qksks4fkmhxe0kau";
         $this->password = "yzm47wjkvub2jc9c";

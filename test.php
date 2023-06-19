@@ -6,9 +6,9 @@ if (isset($_POST['btnLogin'])) {
 	echo $pa = $_POST['txtPass'];
 	include_once("con2.php");
 	$dblink = $c->connectToPDO();
-	$sql = "SELECT Username, Password, state FROM Customer WHERE Username= ? AND Password= ?";
+	$sql = "SELECT Username, Password, state FROM customer WHERE Username= ? AND Password= ?";
 	$stmt = $dblink->prepare($sql);
-	$re = $stmt->execute(array($us, "$pa"));
+	$re = $stmt->execute(array($us, $pa));
 	$numrow = $stmt->rowCount();
 	$row = $stmt->fetch(PDO::FETCH_BOTH);
 	if ($numrow == 1) {
