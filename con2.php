@@ -6,10 +6,10 @@ class connecttt{
     public $dbName;
     public function __construct()
     {
-        $this->sever = "ohunm00fjsjs1uzy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-        $this->user = "skvbm33sqfm5obj5";
-        $this->password = "t2u2taow8pw4gvz5";
-        $this->dbName = "o9umjvh8hnngcdrx";
+        $this->sever = "en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $this->user = "qksks4fkmhxe0kau";
+        $this->password = "yzm47wjkvub2jc9c";
+        $this->dbName = "fhd3s7x1d0m2ua00";
     }
     //option 1: mysql
     function connectToMYSQL():mysqli{
