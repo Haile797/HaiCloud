@@ -36,7 +36,6 @@ if(isset($_GET["function"])=="del")
     }
 ?>
 
-
         <form name="frm" method="post" action="">
         <h1>Product Category</h1>
         <p>
