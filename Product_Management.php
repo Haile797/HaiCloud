@@ -84,7 +84,7 @@ if (isset($_SESSION['admin'])&& $_SESSION["admin"]==1)
 else
 {
     echo $_SESSION;
-    // echo '<script>alert(" ")</script>';
-    // echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+    echo '<script>alert(" ")</script>';
+    echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
 }
 ?>
