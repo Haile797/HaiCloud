@@ -1,5 +1,5 @@
-<!-- Bootstrap --> 
-<link rel="stylesheet" type="text/css" href="style.css"/>
+     <!-- Bootstrap --> 
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	    
@@ -29,7 +29,7 @@
 					if(mysqli_num_rows($result)==0)
 					{
 						mysqli_query($conn, "INSERT INTO category (Cat_ID, Cat_Name, Cat_Des) VALUES ('$id','$name','$des')");
-						echo '<meta http-equiv="refresh" content="0;URL=index.php?page=category_management"/>';
+						echo '<meta http-equiv="refresh" content="0;URL=?page=category_management"/>';
 					}
 					else
 					{

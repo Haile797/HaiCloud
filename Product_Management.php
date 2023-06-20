@@ -1,11 +1,9 @@
-<!-- Bootstrap -->
 <?php
-ob_start();
-// session_start();
-if (isset($_SESSION['admin'])&& $_SESSION["admin"]==1)
-{
-?>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    if(isset($_SESSION['admin']) && $_SESSION['admin']==1)
+    {
+?> 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script>
         function deleteConfirm() {
             if(confirm("Do you want delete it?")) {
@@ -78,13 +76,12 @@ if (isset($_SESSION['admin'])&& $_SESSION["admin"]==1)
             ?>
             </tbody>
         </table>
-        </form>
-        <?php
-}
-else
-{
-    echo $_SESSION;
-    echo '<script>alert(" ")</script>';
-    echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
-}
+</form>
+<?php
+   }
+    else
+    {
+        echo '<script>alert("You are not administrator")</script>';
+        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+    }
 ?>

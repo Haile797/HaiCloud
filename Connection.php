@@ -1,6 +1,4 @@
-<?php 
-$conn = mysqli_connect('localhost', 'root', '','online_shopping')
-or die("Can not connect database".mysqli_connect_error());
-// $conn = mysqli_connect('l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 'rq1k0dgtn79oh6an', 'ycra5awekrdhjx13','v210l47hkjg87s2q')
-// or die("Can not connect database".mysqli_connect_error());
+<?php
+$conn = mysqli_connect('ble5mmo2o5v9oouq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 'ypdhx37pt9yemc6d','x6rhtqqkdneyiihz', 'ieh311gevbvf9lik')
+        or die("Can not connect database".mysqli_connect_error());
 ?>

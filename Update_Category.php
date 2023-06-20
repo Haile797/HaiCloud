@@ -1,9 +1,13 @@
+<?php
+if(isset($_SESSION['admin']) && $_SESSION['admin']==1)
+{
+?>
 <!-- Bootstrap --> 
 <link rel="stylesheet" type="text/css" href="style.css"/>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
    <?php
-    include_once("connection.php");
+	include_once("connection.php");
 	
 	if(isset($_GET['id'])) 
 	{
@@ -13,7 +17,7 @@
 		$cat_id= $row['Cat_ID'];
 		$cat_name= $row['Cat_Name'];
 		$cat_des= $row['Cat_Des'];
-	
+		
 	?>
 <div class="container">
 	<h2>Updating Product Category</h2>
@@ -51,7 +55,7 @@
 				</form>
 	</div>
     <?php
-	}
+	} 
 	else 
 	{
 		echo '<meta http-equiv="refresh" content="0;URL=Category_Management.php"/>';
@@ -80,7 +84,7 @@
 		 if(mysqli_num_rows($result)==0)
 		 {
 			 mysqli_query($conn,"update category set Cat_Name ='$name', Cat_Des='$des' where Cat_ID='$id'");
-			 echo '<meta http-equiv="refresh" content="0;URL=index.php?page=category_management"/>';
+			 echo '<meta http-equiv="refresh" content="0;URL=?page=category_management"/>';
 		 }
 		 else {
 			 echo "<li>Duplicate category Name </li>";
@@ -90,3 +94,11 @@
 
    }
     ?>
+<?php
+}
+else 
+{
+    echo '<script>alert("You are not administrator")</script>';
+    echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+}
+?>

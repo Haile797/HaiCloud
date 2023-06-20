@@ -85,8 +85,8 @@ function check(){
 							</div>
                             </div>
                             
-                             <div class="form-group">
-							 <label for="lblMatKhau2" class="col-sm-2 control-label">Confirm Password(*):  </label>
+                             <div class="form-group"> 
+                            <label for="lblMatKhau2" class="col-sm-2 control-label">Confirm Password(*):  </label>
 							<div class="col-sm-10">
 							      <input type="password" name="txtPass2" id="txtPass2" class="form-control"/>
 							</div>
@@ -115,9 +115,15 @@ function check(){
                             </div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-						      <input type="submit" style = " background-color: yellow; color:black"  class="btn btn-primary" name="btnUpdate" id="btnUpdate" value="Update"/>
+						      <input type="submit" style = " background-color: pink; color:black"  class="btn btn-primary" name="btnUpdate" id="btnUpdate" value="Update"/>
                               	
 						</div>
 					</div>
 				</form>
 </div>
+
+
+
+
+
+

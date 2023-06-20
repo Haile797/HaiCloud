@@ -1,13 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*Chi tiet san pham*/
-.Gia {
+/*Product details*/
+.price {
 	color: #F00;
 	font-weight:  bold;
 }
 
-.GiaCu {
+.price {
 	color: #990000;
 	text-decoration: line-through;
 	font-weight: bold;

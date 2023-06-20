@@ -1,5 +1,9 @@
+<?php
+if(isset($_SESSION['admin']) && $_SESSION['admin']==1)
+{
+?>
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 <?php
 	include_once("connection.php");
@@ -68,7 +72,7 @@
                  <div class="form-group">   
                     <label for="lblShort" class="col-sm-2 control-label">Short description(*):  </label>
 							<div class="col-sm-10">
-							<input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='<?php echo $short; ?>'/>
+							      <input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='<?php echo $short; ?>'/>
 							</div>
                 </div>
                             
@@ -147,7 +151,7 @@
 						        Pro_image='$filePic',Cat_ID='$category',
 						        ProDate='".date('Y-m-d H:i:s')."' WHERE Product_ID='$id'";
 						        mysqli_query($conn,$sqlstring);
-								echo '<meta http-equiv="refresh" content="0;URL=?page=product_management"/>';
+						        echo '<meta http-equiv="refresh" content="0;URL=?page=product_management"/>';
 					        }
 					        else{
 						        echo "<li>Duplicate product Name</li>";
@@ -178,4 +182,12 @@
 			}		
 	    }
 	}	
+?>
+<?php
+}
+else 
+{
+    echo '<script>alert("You are not administrator")</script>';
+    echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+}
 ?>
